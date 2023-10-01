@@ -1,0 +1,440 @@
+@font-face {
+    font-family: "Stencil Regular";
+    src: url("../src/fonts/Stencil Regular.ttf");
+  }
+@font-face {
+    font-family: "Jost Medium Italic";
+    src: url("../src/fonts/Jost-MediumItalic.ttf");
+  }
+@font-face {
+    font-family: "Roboto-Medium";
+    src: url("../src/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto-Italic";
+    src: url("../src/fonts/Roboto-ThinItalic.ttf");
+  }
+body {
+    background-color: rgb(25,25,31);
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box; 
+}
+html, body{overflow-x: hidden;} 
+
+/* header panel */
+
+header { 
+    background-color: rgb(25,25,31);
+    max-width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__buttons { 
+    display: inline-block;
+    text-wrap: nowrap;
+}
+.header__buttons p {
+    padding-top: 10px;
+    margin: 0;
+    color:rgb(233, 233, 252);
+    font-family: "Jost Medium Italic";
+    font-size: 20px;
+}
+.header__buttons:hover { 
+    border-bottom: 3px solid white;
+    transition: 0.3s;
+}
+.header__buttons p:hover { 
+    color:white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+/* гамбургер */
+
+.ham7 {
+    display: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    user-select: none;
+}
+.ham7 path{
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #593c81;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+}
+.ham7.active {
+    transform: rotate(45deg);
+}
+.ham7 .top {
+    stroke-dasharray: 40 82;
+}
+.ham7 .middle {
+    stroke-dasharray: 40 111;
+}
+.ham7 .bottom {
+    stroke-dasharray: 40 161;
+}
+.ham7.active .top {
+    stroke-dasharray: 17 82;
+    stroke-dashoffset: -62px;
+}
+.ham7.active .middle {
+    stroke-dashoffset: 23px;
+}
+.ham7.active .bottom {
+    stroke-dashoffset: -83px;
+}
+
+/* nav panel + верхний раундинг */
+
+nav { 
+    max-width: 100%;
+    background-color: rgb(72,74,78);
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    
+}
+.nav__elements {
+    color:white;
+    align-self: center;
+    flex-wrap: nowrap;
+}
+.nav__elements p { 
+    display: inline;
+    margin: 0;
+    font-family: "Roboto-Italic";
+    text-wrap: nowrap;
+}
+.nav__elements p>a { 
+    text-decoration: none;
+    color: inherit;
+}
+.nav__elements p>a:hover { 
+    border-bottom: 1px solid white;
+}
+#location-icon {
+    width: 15px;
+    padding-right: 5px;flex-wrap: nowrap;
+}
+#call-icon {
+    width: 30px;flex-wrap: nowrap;
+}
+#nav__rounding { 
+    max-width: 50%;
+    position: absolute;
+}
+
+/* блок с лого и фоном main */
+
+main {  
+    background-image: url(../src/images/tatu-na-kisti.jpg);
+    box-shadow: inset 30px 0px 150px 100px black;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: #464646;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    flex-basis: 50px 50% 50% 100px;
+}
+
+/* стрелка влево */
+
+.main__arrow-left { 
+    align-self:center;
+    padding-top: 8%;
+}
+#arrow-left { 
+    width: 50px;
+    
+}
+
+/* центральное лого */
+
+.main__logo {  
+    display: inline-block;
+    width:fit-content;
+    flex-basis: 42.6%;
+}
+.main__logo span {
+    display: block;
+    color:rgb(217,217,241);
+    font-family: "Stencil Regular";
+    font-size: 90px;
+    text-shadow: 5px 5px 5px black;
+    text-align: center;
+}
+#force { 
+padding-bottom: 2%;
+}
+#tatoo { 
+    padding-bottom: 2%;
+}
+
+/* dots */
+
+.main__dots { 
+    width:fit-content;
+    flex-basis: 40%;
+    align-self:flex-end;
+}
+#main__dots {
+    width: 30px;
+}
+
+/* блок с ссылками */
+.main__logo { 
+    padding: 5% 0% 5% 0%;
+}
+.main__contacts__referenses { 
+    margin: 40px;
+    flex-basis: 10%;
+}
+#inst, #tg, #vk {
+    display: block;
+    width: 30px;
+}
+
+/* стрелка вправо */
+.main__arrow-right { 
+    align-self:center;
+    padding-top: 8%;
+}
+#arrow-right { 
+    width: 50px;
+}
+
+/* нижний раундинг */
+
+#nav__rounding-bottom { 
+    transform: rotate(180deg);
+    position: absolute;
+    margin-top: -6%;
+    max-width: 50%;
+    right: 0;
+}
+
+/* контент после основного блока */
+
+/* кнопки записи на сеанс */
+
+.register-panel {
+    background-color: rgb(72,74,78); 
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.register-panel p {
+    margin: 0;
+}
+.btn {
+	font-size: inherit;
+    font-family: "Jost Medium Italic";
+	cursor: pointer;
+	padding: 25px 80px;
+    text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: 700;
+
+	display: flex;
+    text-wrap:nowrap;
+	
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+    
+    background: #18171f;
+    color: #fff;
+}
+.btn:hover {
+	background: #423c77;
+}
+.btn-4:active {
+	background: #2c3e50;
+	top: 2px;
+}
+
+/* прикрутим анимацию к кнопке */
+
+.arrow-8 {
+    display: block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+.arrow-8:before,
+.arrow-8:after {
+	content: '';
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-left: 3px solid #37344d;
+	border-bottom: 3px solid #3f3c62;
+	animation: arrow-8 3s linear infinite;
+}
+.arrow-8:after {
+	animation: arrow-8 3s linear infinite -1.5s;
+}
+@keyframes arrow-8 {
+	0% {
+		opacity: 0;
+		transform: translate(-100px, 0) rotate(-135deg);
+	}
+	10%, 90% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;  
+		transform: translate(-60px, 0) rotate(-135deg);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-35px, 0) rotate(-135deg);
+	}
+}
+
+.arrow-8-register {
+    display: block;
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+.arrow-8-register:before,
+.arrow-8-register:after {
+	content: '';
+	position: absolute;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border-left: 3px solid #37344d;
+	border-bottom: 3px solid #3f3c62;
+	animation: arrow-8 3s linear infinite;
+}
+.arrow-8-register:after {
+	animation: arrow-8 3s linear infinite -1.5s;
+}
+@keyframes arrow-8-register {
+	0% {
+		opacity: 0;
+		transform: translate(50px, 0) rotate(-135deg);
+	}
+	10%, 90% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;  
+		transform: translate(30px, 0) rotate(-135deg);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(60px, 0) rotate(-135deg);
+	}
+}
+
+
+/* наши мастера */
+.masters { 
+    text-align: center;
+}
+.our-masters {
+    display: inline-block;
+}
+.masters a { 
+    text-decoration: none;
+}
+h1  { 
+    color:rgb(153, 147, 147);
+    text-align: center;
+    text-wrap: nowrap;
+    font-family: "Jost Medium Italic";
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.arrow {
+    border: solid rgb(255, 255, 255);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 10px;
+}
+.down {
+    transform: rotate(45deg);
+    webkit-transform: rotate(45deg);
+}
+
+/* медиа-запросы. адаптив */
+
+@media screen and (max-width:690px) { 
+    .arrow-8, .arrow-8-register { 
+        display: none;
+    }
+}
+
+@media screen and (max-width:516px) { 
+    #arrow-left { 
+        display: none;
+    }
+    #arrow-right { 
+        display: none;
+    }
+    #main__dots { 
+        display: none;
+    }
+    .nav__elements p { 
+        display: none;
+    }
+    .register-panel { 
+        display: block;
+        position: relative;
+        text-align: center;
+        
+    }
+    .btn { 
+        width: 100%;
+    }
+    .btn span { 
+        flex-basis: 100%;
+    }
+    main { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    #inst,#tg,#vk { 
+        display: inline;
+        
+    }
+
+                                            /*Появление гамбургера и скрытие хедера*/
+    .header__buttons {
+        display: none;
+    }
+    .ham7 { 
+        display: block;
+    }
+    .masters { 
+        margin-top: 13%;
+    }
+}
+@media screen and (max-width:406px) { 
+    main { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    
+}
